@@ -1,0 +1,6 @@
+{
+  "name": "Minimal Digital Portfolio",
+  "description": "A dark mode single-page digital portfolio featuring custom video grid and masonry graphic design galleries, editable bio information, and contact CTAs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

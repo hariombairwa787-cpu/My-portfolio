@@ -1,0 +1,34 @@
+{
+  "entities": {
+    "Portfolio": {
+      "title": "Portfolio",
+      "description": "Portfolio content including profile, videos, and graphics",
+      "type": "object",
+      "properties": {
+        "profile": {
+          "type": "object",
+          "description": "User profile information"
+        },
+        "videos": {
+          "type": "array",
+          "description": "List of videos"
+        },
+        "graphics": {
+          "type": "array",
+          "description": "List of graphics"
+        },
+        "lastUpdated": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["profile", "videos", "graphics"]
+    }
+  },
+  "firestore": {
+    "/portfolios/{portfolioId}": {
+      "schema": "Portfolio",
+      "description": "Collection storing portfolios"
+    }
+  }
+}

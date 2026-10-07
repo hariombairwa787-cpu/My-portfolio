@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #6C63FF;
+  --color-bg-dark: #0F1117;
+  --color-surface: #1A1D26;
+  --color-accent: #00D4FF;
+  --color-secondary-text: #A8B0C3;
+}
+
+/* Custom glow animations and scroll behaviors */
+@layer utilities {
+  .glow-primary {
+    box-shadow: 0 0 15px rgba(108, 99, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+  }
+  .glow-primary:hover {
+    box-shadow: 0 0 25px rgba(108, 99, 255, 0.7);
+  }
+  .glow-accent {
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+    transition: all 0.3s ease-in-out;
+  }
+  .glow-accent:hover {
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.7);
+  }
+  .glow-pulse {
+    animation: glow-pulse-anim 2s infinite alternate;
+  }
+}
+
+@keyframes glow-pulse-anim {
+  0% {
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(108, 99, 255, 0.6);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0F1117;
+  color: #FFFFFF;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0F1117;
+}
+::-webkit-scrollbar-thumb {
+  background: #1A1D26;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6C63FF;
+}
+
